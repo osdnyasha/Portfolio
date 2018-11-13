@@ -2,7 +2,7 @@ $(document).ready(function () {
 
 	if($(window).width() < 634 ) {
 		$(".mnu-button").css("display", "block");
-		$(".mnu").css("display", "none");
+		$(".mnu-block").css("display", "none");
 	};
 
 	function heightDetect() {
@@ -34,10 +34,10 @@ $(document).ready(function () {
 		for(var i = 1; i < 6; i++){                            
    	if ( $(window).scrollTop() >= $(section[i]).offset().top - ($(section[i]).height()/2) && $(window).scrollTop() < $(section[i]).offset().top + ($(section[i]).height()/2) ){ // ставим условие
    		$(".offer-block").css("opacity" , "1");
-   		$(".mnu li:nth-child(" + i  + ")").attr("id" , "active");        
+   		$(".mnu-block__item:nth-child(" + i  + ")").attr("id" , "active");        
    	}
    	else {
-   		$(".mnu li:nth-child(" + i + ")").attr("id" , "");
+   		$(".mnu-block__item:nth-child(" + i + ")").attr("id" , "");
    	}
    }
 });
@@ -46,11 +46,11 @@ $(document).ready(function () {
 	function widthResize() {
 		if($(window).width() < 634) {
 			$(".mnu-button").css("display", "block");
-			$(".mnu").css("display", "none");
+			$(".mnu-block").css("display", "none");
 		}
 		else {
 			$(".mnu-button").css("display", "none");
-			$(".mnu").css("display", "block");
+			$(".mnu-block").css("display", "block");
 		}
 	}	
 	function bodyoverflow() {
@@ -77,7 +77,7 @@ $(document).ready(function () {
 	};
 
 
-	$(".mnu li").click(function() {
+	$(".mnu-block__item").click(function() {
 		$("#active").attr("id","");
 		$(this).attr("id","active");
 	});
@@ -96,18 +96,18 @@ $(document).ready(function () {
 		if ($(".top_mnu").is(":visible")) {
 			$(".top_mnu").fadeOut(600);
 			$("body").css("overflow","visible");
-			$(".top_mnu li a").removeClass("fadeInUp animated");
+			$(".top_mnu__item a").removeClass("fadeInUp animated");
 		} else {
 			$(".top_mnu").fadeIn(600);
 			$("body").css("overflow", "hidden");
-			$(".top_mnu li a").addClass("fadeInUp animated");
+			$(".top_mnu__item a").addClass("fadeInUp animated");
 			
 		};
 
 		
 	});
 
-	$('.mnu li a , .top_mnu ul li a').on('click', function (e) {
+	$('.mnu-block__item a , .top_mnu__item a').on('click', function (e) {
 		
 		var targetSec = $(this).text();
 		$('html, body').animate({
@@ -141,10 +141,10 @@ $(document).ready(function () {
 
 	 window.onscroll = function() {
 	 	if(window.pageYOffset > 0){
-	 		$('.nav-box').css("background-color", "rgba(0,0,0,.9)");
+	 		$('.nav-block').css("background-color", "rgba(0,0,0,.9)");
 	 	}
 	 	else {
-	 		$('.nav-box').css("background-color", "rgba(0,0,0,.4)");
+	 		$('.nav-block').css("background-color", "rgba(0,0,0,.4)");
 	 	}
 	 };
 	 var typed = new Typed('#typed', {
