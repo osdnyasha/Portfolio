@@ -812,10 +812,11 @@ header p {
 
 
 input,textarea {
-	width: 80%;
+	width: 400px;
 	display:block;
 	padding:5px;
-	margin: 20px auto;
+	margin-top: 20px;
+	margin-left: 20px;
 	background-color:black;
 	border-top: none;
 	border-right: none;
@@ -823,6 +824,7 @@ input,textarea {
 	border-bottom: 1px solid #666;
 	color:#fff;
 	transition: all .2s ease-in-out;
+	text-indent: 0;
 }
 textarea {
 	max-width: 450px;
