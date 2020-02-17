@@ -812,7 +812,8 @@ header p {
 
 
 input,textarea {
-	width: 400px;
+	max-width: 400px;
+	width: 90%;
 	display:block;
 	padding:5px;
 	margin-top: 20px;
@@ -1048,5 +1049,6 @@ input:first-child {
 	.portfolio-box .portfolio-box-caption .portfolio-box-caption-content .project-name {
 		font-size: 22px;
 	}
+	
 }
 
